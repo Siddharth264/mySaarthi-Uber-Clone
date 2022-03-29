@@ -2,14 +2,10 @@ import {useState} from 'react'
 import tw from "tailwind-styled-components"
 import Link from 'next/link'
 
-const search = () => {
+const Search = () => {
 
     const [pickup, setPickup ] = useState("");
     const [dropoff, setDropoff ] = useState("");
-
-    
-
-
 
   return (
     <Wrapper>
@@ -137,4 +133,4 @@ bg-black p-3 mx-4 flex justify-center text-2xl text-white cursor-pointer
 
 
 
-export default search
+export default Search
