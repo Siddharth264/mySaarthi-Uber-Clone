@@ -38,19 +38,19 @@ const Confirmride = () => {
 }
 
 const Wrapper = tw.div`
-bg-black text-center h-screen p-40 flex flex-col 
+bg-black items-center h-screen w-screen p-4 flex flex-col justify-center
 `
 
 const ConfirmMessage1 = tw.div`
-text-6xl mb-8 text-white 	
+text-5xl mb-8 text-white 	
 `
 
 const ConfirmMessage2 = tw.div`
-text-3xl pl-3 text-white
+text-2xl pl-3 text-white
 `
 
 const ConfirmMessage3 = tw.div`
-font-bold text-2xl py-4 text-white	
+font-bold text-xl py-4 text-white	
 `
 const VehicleImage = tw.img`
 h-1/5 w-auto object-contain

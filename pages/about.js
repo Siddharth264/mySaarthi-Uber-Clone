@@ -5,13 +5,13 @@ import Link from 'next/link'
 const About = () => {
   return (
     <Wrapper>
-        <ButtonContainer>
-            <Link href="/" >
-            <BackButton src="https://img.icons8.com/ios-filled/50/000000/left.png" />
-            </Link>
-        </ButtonContainer>
-         <Desc>
-             <Text>Technologies Used</Text>
+        <Desc>
+            <ButtonContainer>
+                <Link href="/" >
+                <BackButton src="https://img.icons8.com/ios-filled/50/000000/left.png" />
+                </Link>
+            </ButtonContainer>
+            <Text>Technologies Used</Text>
             <ServicesImg src= "https://img.icons8.com/color/96/000000/services--v1.png" />
         </Desc>
         <Part1> 
@@ -43,11 +43,7 @@ const About = () => {
 
 
 const Wrapper = tw.div`
-h-screen  items-center flex justify-center bg-gray-200
-`
-
-const AboutSection = tw.div`
-absolute bottom-10 flex flex-col items-center text-lg font-mono	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+h-screen flex flex-col  bg-gray-200
 `
 const Github = tw.img`
 transform hover:scale-105
@@ -65,27 +61,27 @@ transform hover:scale-105
 
 `
 const ReactImg = tw.img`
-px-5 py-5 transform hover:scale-105 my-6
+px-5 py-4 transform hover:scale-105  h-28 w-28
 `
 
 const Part1 = tw.div`
-flex flex-col justify-evenly
+flex flex-col justify-center flex-1 items-center
 `
 
 const NextImg = tw.img`
-h-20 px-5 py-5 transform hover:scale-105 my-6
+h-20 px-5 py-5 transform hover:scale-105 my-4 h-28 w-52
 `
 
 const Desc = tw.div`
-top-10 absolute text-3xl font-extrabold flex 
+text-3xl font-extrabold flex justify-center pl-10
 `
 const FirebaseImg = tw.img`
-transform hover:scale-105 h-20 w-auto object-contain my-6
+transform hover:scale-105 h-20 w-auto object-contain my-4
 `
 
 
 const TailwindCSSImg = tw.img`
-h-20 transform hover:scale-105 my-6
+h-20 transform hover:scale-105 my-4
 
 `
 const Text = tw.div`
@@ -97,6 +93,10 @@ h-20
 `
 const ButtonContainer = tw.div`
 rounded-full absolute top-4 left-4 z-10 bg-white shadow-md curson-pointer
+`
+
+const AboutSection = tw.div`
+flex flex-col items-center text-lg  font-mono	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 `
 
 const BackButton = tw.img``
