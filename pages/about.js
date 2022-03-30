@@ -49,23 +49,25 @@ const Github = tw.img`
 transform hover:scale-105
 `
 const Contacts = tw.div`
-flex  justify-center
+flex  items-center
 `
 
 const Facebook = tw.img`
 transform hover:scale-105
+
 `
 
 const Instagram = tw.img`
 transform hover:scale-105
 
+
 `
 const ReactImg = tw.img`
-px-5 py-4 transform hover:scale-105  h-28 w-28
+transform hover:scale-105  h-28 w-28 px-2 py-2
 `
 
 const Part1 = tw.div`
-flex flex-col justify-center flex-1 items-center
+flex flex-col justify-center  items-center my-12
 `
 
 const NextImg = tw.img`
