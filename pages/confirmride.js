@@ -31,7 +31,7 @@ const Confirmride = () => {
             {car}
         </Vehiclename>
         <Fare>
-            {'$'+ price}
+            {'₹'+ price}
         </Fare>
     </Wrapper>
   )

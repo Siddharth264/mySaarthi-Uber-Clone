@@ -1,6 +1,4 @@
-import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import tw from "tailwind-styled-components"
 import {useEffect, useState} from 'react' 
 import Map from './components/Map'
@@ -8,6 +6,8 @@ import Link from 'next/link'
 import { auth } from '../firebase'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { useRouter } from 'next/router'
+import mypic from '../assets/myimage.png'
+
 
 
 
@@ -42,13 +42,18 @@ export default function Home() {
       <ActionItems>
           {/*Header*/}
           <Header>
-            <Uberlogo src ="https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg" />
+            {/* <Uberlogo src = "https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg" /> */}
+            <Image
+              src={mypic}
+              alt="Picture of the author"
+              width="150px"
+              height="150px"
+            />
             <Profile>
               <Name> {user && user.name} </Name>
               <UserImage
               src={user && user.photoUrl}
               />
-
             </Profile>
             
           </Header>
@@ -107,7 +112,7 @@ mr-4 w-20 text-small font-bold
 `
 
 const UserImage = tw.img`
-h-12 w-12 rounded-full border border-gray-200 p-px 
+h-14 w-14 rounded-full border border-gray-200 p-px 
 `
 
 const ActionButtons = tw.div`
@@ -122,11 +127,3 @@ const ActionButtonImage = tw.img`
 h-3/5
 `
 
-
-const Signout = tw.div`
-
-`
-
-const SignoutButton = tw.img`
-h-10 w-12 cursor-pointer bg-white rounded-full pl-3
-`
