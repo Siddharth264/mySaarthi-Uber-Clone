@@ -2,6 +2,8 @@ import React from 'react'
 import tw from "tailwind-styled-components"
 import { useRouter } from "next/router"
 import Link from 'next/link'
+import mypic from '../assets/myimage.png'
+import Image from 'next/image'
 
 const Confirmride = () => {
 
@@ -16,12 +18,21 @@ const Confirmride = () => {
             <BackButton src="https://img.icons8.com/ios-filled/50/000000/left.png" />
             </Link>
         </ButtonContainer>
+        <Logo>
+        <Image
+              src={mypic}
+              alt="Picture of the author"
+              width="100px"
+              height = "100px"
+            />
+
+        </Logo>
         <ConfirmMessage1>
             Booking Successful
         </ConfirmMessage1>
         <Tick src = "https://www.pngitem.com/pimgs/m/240-2408141_blue-tick-in-circle-hd-png-download.png" />
         <ConfirmMessage2>
-            You have booked a ride...
+            You have booked a ride with ChaloIndia
         </ConfirmMessage2>
         <ConfirmMessage3>
             {pickup} To {dropoff}
@@ -73,7 +84,9 @@ rounded-full absolute top-4 left-4 z-10 bg-white shadow-md cursor-pointer
 const BackButton = tw.img`
 
 `
-
+const Logo = tw.div`
+ flex justify-center items-center
+`
 
 
 

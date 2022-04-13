@@ -46,8 +46,8 @@ export default function Home() {
             <Image
               src={mypic}
               alt="Picture of the author"
-              width="150px"
-              height="150px"
+              width="120px"
+              height="120px"
             />
             <Profile>
               <Name> {user && user.name} </Name>
