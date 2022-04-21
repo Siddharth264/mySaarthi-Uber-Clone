@@ -8,13 +8,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { useRouter } from 'next/router'
 import mypic from '../assets/myimage.png'
 
-
-
-
-
 export default function Home() {
-
-  
 
   const [user, setUser] = useState(null)
   const router = useRouter()

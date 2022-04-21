@@ -32,10 +32,12 @@ const RideSelector = ({pickUpCoordinates, dropoffCoordinates, pickup, dropoff}) 
             { carList.map((car, index) => (
                 <Car key={index}>
                 <CarImage src={car.imgUrl} />
+               
 
                 <CarDetails>
                     <Service>{car.service}</Service>
-                    <Time>5 mins away</Time>
+                    
+                    <Time> {Math.floor(Math.random() * (15 - 5 + 1) ) + 5} mins away</Time>
                 </CarDetails>
 
                 <Link href={

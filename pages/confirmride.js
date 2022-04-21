@@ -44,6 +44,7 @@ const Confirmride = () => {
         <Fare>
             {'₹'+ price}
         </Fare>
+        
     </Wrapper>
   )
 }
@@ -74,7 +75,7 @@ const Fare = tw.div`
 font-light text-xl p-4 text-white
 `
 const Tick = tw.img`
-h-20 w-auto object-contain
+h-20 w-auto object-contain mb-5
 `
 
 const ButtonContainer = tw.div`
