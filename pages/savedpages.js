@@ -6,8 +6,8 @@ import Places from './components/Places'
 import Link from 'next/link'
 
 
-const savedpages = () => {
-    const [places, setPlaces] = useState([])
+const Savedpages = () => {
+    const [places, setPlaces] = useState([]);
     
     
     
@@ -19,7 +19,7 @@ const savedpages = () => {
         })
 
 
-    }, [])
+    }, []);
     
     //console.log(places)
 
@@ -63,4 +63,4 @@ const Wrapper  = tw.div`
 
 `
 
-export default savedpages
+export default Savedpages
