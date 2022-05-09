@@ -7,9 +7,6 @@ import Link from 'next/link'
 
 
 const savedpages = () => {
-
-    const [pickup, setPickup] = useState("")
-    const [dropoff, setDropoff] = useState("")
     const [places, setPlaces] = useState([])
     
     
