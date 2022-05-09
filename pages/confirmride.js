@@ -4,11 +4,30 @@ import { useRouter } from "next/router"
 import Link from 'next/link'
 import mypic from '../assets/myimage.png'
 import Image from 'next/image'
+import {useEffect, useState} from 'react' 
+import { collection, doc, setDoc } from "firebase/firestore"; 
+import {db} from '../firebase'
+
+
 
 const Confirmride = () => {
 
     const router = useRouter()
     const { pickup, dropoff , carImg, car,  price} = router.query
+
+    function SavePlace() {
+        const newPlace = doc(collection(db, "places"))
+
+        setDoc(newPlace, {
+            pickup : pickup,
+            dropoff : dropoff
+        })
+    }
+
+    useEffect(() => {
+        SavePlace()
+    }, [])
+    
 
 
   return (

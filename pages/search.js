@@ -1,11 +1,14 @@
 import {useState} from 'react'
 import tw from "tailwind-styled-components"
 import Link from 'next/link'
-
+import { collection, doc, setDoc } from "firebase/firestore"; 
+import {db} from '../firebase'
 const Search = () => {
 
     const [pickup, setPickup ] = useState("");
     const [dropoff, setDropoff ] = useState("");
+
+    
 
   return (
     <Wrapper>
@@ -45,10 +48,13 @@ const Search = () => {
         
         </InputContainer>
 
+
+        <Link href="/savedpages">
         <SavedPlaces>
             <StarIcon src='https://img.icons8.com/ios-filled/50/ffffff/star--v1.png' />
             Saved Places
         </SavedPlaces>
+        </Link>
 
         <Link href={
             {
@@ -60,22 +66,21 @@ const Search = () => {
             }
         }>
             <ConfirmButtonContainer>
-                Confirm Locations
+                <ConfirmButton>Confirm Locations</ConfirmButton>
             </ConfirmButtonContainer>
         </Link>
-        
-
-
 
     </Wrapper>
   )
 }
 
+const ConfirmButton = tw.button``
+
 const Wrapper = tw.div`
 bg-gray-200 h-screen
 `
 const ButtonContainer = tw.div`
-bg-white px-4
+bg-white px-4 cursor-pointer
 `
 
 const BackButtonImage = tw.img`
@@ -114,7 +119,7 @@ w-10 h-10 bg-gray-200 rounded-full ml-3
 `
 
 const SavedPlaces = tw.div`
-flex items-center bg-white px-4 py-2 mb-3
+flex items-center bg-white px-4 py-2 mb-3 cursor-pointer
 `
 const StarIcon = tw.img`
 bg-gray-400 w-10 h-10 p-2 rounded-full mr-2 
