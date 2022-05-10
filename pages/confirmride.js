@@ -10,6 +10,7 @@ import {db} from '../firebase'
 
 
 
+
 const Confirmride = () => {
 
     const router = useRouter()
@@ -69,19 +70,19 @@ const Confirmride = () => {
 }
 
 const Wrapper = tw.div`
-bg-black items-center h-screen w-screen p-4 flex flex-col justify-center
+bg-black items-center h-screen w-screen p-4 flex flex-col justify-evenly
 `
 
 const ConfirmMessage1 = tw.div`
-text-5xl mb-8 text-white 	
+text-5xl mb-8 text-white text-center
 `
 
 const ConfirmMessage2 = tw.div`
-text-2xl pl-3 text-white
+text-2xl pl-3 text-white text-center
 `
 
 const ConfirmMessage3 = tw.div`
-font-bold text-xl py-4 text-white	
+font-bold text-xl py-4 text-white text-center
 `
 const VehicleImage = tw.img`
 h-1/5 w-auto object-contain

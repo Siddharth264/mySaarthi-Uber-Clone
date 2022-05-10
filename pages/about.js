@@ -32,9 +32,17 @@ const About = () => {
         <AboutSection>
             Designed and Developed by Siddharth Singh
             <Contacts>
+                
+                <Link href="https://github.com/Siddharth264?tab=repositories">
                 <Github src="https://img.icons8.com/color-glass/48/000000/github.png"/> 
+                </Link>
+                <Link href="https://www.facebook.com/thakur.siddharth.77/">
                 <Facebook src="https://img.icons8.com/color-glass/48/000000/facebook.png" />
+                </Link>
+                <Link href="https://www.instagram.com/siddh._.artha/">
                 <Instagram src="https://img.icons8.com/cute-clipart/48/000000/instagram-new.png" />
+                </Link>
+
             </Contacts>
         </AboutSection>
     </Wrapper>
@@ -75,7 +83,7 @@ h-20 px-5 py-5 transform hover:scale-105 my-4 h-28 w-52
 `
 
 const Desc = tw.div`
-text-3xl font-extrabold flex justify-center pl-10
+text-3xl font-extrabold flex flex-row justify-center pl-4 mt-8
 `
 const FirebaseImg = tw.img`
 transform hover:scale-105 h-20 w-auto object-contain my-4
@@ -83,15 +91,15 @@ transform hover:scale-105 h-20 w-auto object-contain my-4
 
 
 const TailwindCSSImg = tw.img`
-h-20 transform hover:scale-105 my-4
+h-20 transform hover:scale-105 
 
 `
 const Text = tw.div`
-mt-6 mr-4 font-mono	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+mt-6 mr-2 ml-10 font-mono	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 `
 
 const ServicesImg = tw.img`
-h-20
+h-16 mt-3
 `
 const ButtonContainer = tw.div`
 rounded-full absolute top-4 left-4 z-10 bg-white shadow-md curson-pointer
