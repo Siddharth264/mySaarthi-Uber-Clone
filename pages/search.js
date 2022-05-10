@@ -49,7 +49,7 @@ const Search = () => {
         </InputContainer>
 
 
-        <Link href="/Savedpages">
+        <Link href="/savedpages">
         <SavedPlaces>
             <StarIcon src='https://img.icons8.com/ios-filled/50/ffffff/star--v1.png' />
             Saved Places
