@@ -17,7 +17,7 @@ const RideSelector = ({pickUpCoordinates, dropoffCoordinates, pickup, dropoff}) 
         }).then(data => {
             // console.log
             if(data.routes[0]) {
-            setRideDuration(data.routes[0].duration/100)
+            setRideDuration(data.routes[0].duration/60)
             }
         }).catch((e) => console.log(e));
 
@@ -48,14 +48,14 @@ const RideSelector = ({pickUpCoordinates, dropoffCoordinates, pickup, dropoff}) 
                             dropoff : dropoff,
                             carImg : car.imgUrl,
                             car : car.service,
-                            price : (rideDuration * car.multiplier*30).toFixed(2),
+                            price : (rideDuration * car.multiplier).toFixed(2),
                             
                         }
                     }
                 }>
 
                 <Price>
-                    {'₹'+(rideDuration * car.multiplier*30).toFixed(2)}
+                    {'₹'+(rideDuration * car.multiplier).toFixed(2)}
                 </Price>
                 </Link>
 
