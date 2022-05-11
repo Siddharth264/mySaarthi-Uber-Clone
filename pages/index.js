@@ -40,7 +40,7 @@ export default function Home() {
             <Image
               src={mypic}
               alt="Picture of the author"
-              width="120px"
+              width="150px"
               height="120px"
             />
             <Profile>

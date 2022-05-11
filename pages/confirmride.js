@@ -7,6 +7,8 @@ import Image from 'next/image'
 import {useEffect, useState} from 'react' 
 import { collection, doc, setDoc } from "firebase/firestore"; 
 import {db} from '../firebase'
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+
 
 
 
@@ -42,17 +44,24 @@ const Confirmride = () => {
         <Image
               src={mypic}
               alt="Picture of the author"
-              width="100px"
-              height = "100px"
+              width="150px"
+              height = "120px"
             />
 
         </Logo>
         <ConfirmMessage1>
             Booking Successful
         </ConfirmMessage1>
-        <Tick src = "https://www.pngitem.com/pimgs/m/240-2408141_blue-tick-in-circle-hd-png-download.png" />
+        <Player
+            autoplay
+            keepLastFrame
+            src="https://assets9.lottiefiles.com/datafiles/OhIfcxnkLsj1Jxj/data.json"
+            style={{ height: '150px', width: '150px' }}
+            speed="0.75"
+            >
+            </Player>
         <ConfirmMessage2>
-            You have booked a ride with ChaloIndia
+            You have booked a ride with mySarathi
         </ConfirmMessage2>
         <ConfirmMessage3>
             {pickup} To {dropoff}
@@ -74,7 +83,7 @@ bg-black items-center h-screen w-screen p-4 flex flex-col justify-evenly
 `
 
 const ConfirmMessage1 = tw.div`
-text-5xl mb-8 text-white text-center
+text-5xl mb-4 text-white text-center mt-4
 `
 
 const ConfirmMessage2 = tw.div`

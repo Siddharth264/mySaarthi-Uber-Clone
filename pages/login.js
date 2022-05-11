@@ -28,7 +28,7 @@ const Login = () => {
         <Image
               src={mypic}
               alt="Picture of the author"
-              width="130px"
+              width="150px"
               height = "130px"
             />
 
