@@ -55,10 +55,6 @@ const Confirm = () => {
   },[pickup, dropoff])
 
 
-
-
-
-
   return (
     <Wrapper>
         <ButtonContainer>

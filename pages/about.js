@@ -102,7 +102,7 @@ const ServicesImg = tw.img`
 h-16 mt-3
 `
 const ButtonContainer = tw.div`
-rounded-full absolute top-4 left-4 z-10 bg-white shadow-md curson-pointer
+rounded-full absolute top-4 left-4 z-10 bg-white shadow-md cursor-pointer
 `
 
 const AboutSection = tw.div`

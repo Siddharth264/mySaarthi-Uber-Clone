@@ -114,7 +114,7 @@ flex
 `
 
 const ActionButton = tw.div`
-flex bg-gray-200 flex-1 m-1 h-32 items-center flex-col justify-center rounded-lg transform hover:scale-105 transition text-xl
+flex bg-gray-200 flex-1 m-1 h-32 items-center flex-col justify-center rounded-lg transform hover:scale-105 transition text-xl cursor-pointer
 `
 
 const ActionButtonImage = tw.img`

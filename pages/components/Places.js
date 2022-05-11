@@ -1,11 +1,21 @@
 import React from 'react'
 import tw from "tailwind-styled-components"
+import Link from 'next/link'
 
 
 const Places = ({ pickup, dropoff}) => {
   return (
 
     <Wrapper>
+      <Link href={
+            {
+                pathname : "/confirm",
+                query : {
+                    pickup : pickup,
+                    dropoff : dropoff,
+                }
+            }
+        }>
     <SavedPlace>
         <PickupAdd>
             <Fromtext>From</Fromtext>
@@ -18,6 +28,7 @@ const Places = ({ pickup, dropoff}) => {
         </DropoffAdd>
         
     </SavedPlace>
+    </Link>
     </Wrapper>
   )
 }
